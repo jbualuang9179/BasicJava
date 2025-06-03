@@ -15,9 +15,19 @@ public class OddEven {
         }
         System.out.println("=======================");
         System.out.println("call method printEvenOdd : " + printEvenOdd(number));
+        System.out.println("=======================");
+        System.out.println("call method solution3 : " + solution3SwitchCase(number));
     }
 
     public static String printEvenOdd(int number) {
         return number % 2 == 0 ? "Even" : "Odd";
+    }
+
+    private static String solution3SwitchCase(int number) {
+        return switch (number % 2) {
+            case 0 -> "Even";
+            case 1 -> "Odd";
+            default -> throw new IllegalArgumentException("Invalid number");
+        };
     }
 }
