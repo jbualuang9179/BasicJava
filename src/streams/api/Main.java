@@ -37,7 +37,7 @@ public class Main {
         // Streams Lazy Evaluation
         Stream<Integer> integerStream = Stream.of(10, 11, 12, 13, 14);
         Stream<Integer> filteredIntegerStream = integerStream.filter(i -> {
-            System.out.println("FilteredInteger");
+            System.out.println("FilteredInteger values : " + i);
             return i % 2 == 0;
         });
         System.out.println("Count = " + filteredIntegerStream.count());
